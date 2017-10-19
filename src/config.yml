@@ -1,0 +1,75 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                  Table of Content                    | #
+# +------------------------------------------------------+ #
+############################################################
+#
+# (1) Network Settings
+# (2) Server Settings
+#
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 1. Network Settings                  | #
+# +------------------------------------------------------+ #
+############################################################
+#
+# Network settings is LilyPad specific settings, allowing
+# you to change the data that is sent back and forth between
+# the servers. If you want to send custom placeholders to
+# the lobby servers, you can use the provided API that comes
+# with the plugin, documentation and examples of the API in
+# action are provided on the wiki page.
+#
+# https://github.com/Senither/Lilypad-Minigame-Hook/wiki
+
+# The channel node represents the gaming channel we will be
+# broadcasting the server packets on, allowing the lobby
+# server(s) to pickup on the channel and sort the servers
+# accordingly, allowing you to have multiple gamemodes running
+# under the same network, but assigned to different game boards.
+
+# By default the channel is 'global', making the channel unassigned.
+#
+channel: GLOBAL
+
+# The lobbies node represents our lobby servers on the LilyPad
+# network, all the servers listed below should have the
+# 'LilypadMinigameLobby' plugin on it, allowing it to pickup the
+# network messages and display the server on one or more of the
+# gameboards. You can change what game-board the server is
+# displayed on by changing the game channel the server will be
+# broadcasting on.
+#
+lobbies:
+    - serverName1
+    - serverName2
+    - serverName3
+
+############################################################
+# +------------------------------------------------------+ #
+# |                  2. Server Settings                  | #
+# +------------------------------------------------------+ #
+############################################################
+#
+# Server settings allows you to modify the behavior of the
+# plugin for the server it is installed on.
+#
+
+# The leave command allows players to leave the server and
+# return to one of the lobbies, if you have more than one
+# lobby a random server will be selected for the player.
+#
+# If you don't wish to use the feature, you can disable it
+# below, however please keep in mind that another plugin is
+# required in that case to move the players back to one
+# of the lobby servers.
+#
+# Please note: On server shutdown, LilypadMinigameHook will
+#              attempt to move all the players back to a
+#              lobby server, even if the leave command
+#              is disabled.
+#
+leave-command:
+    enabled: true
+    disabled-message: '&cThis command is disabled for this gamemode'

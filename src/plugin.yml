@@ -1,0 +1,14 @@
+name: LilyPad-Minigame-Hook
+main: com.senither.lilypad.minigame.LilypadMinigameHook
+version: 0.1
+description: Dynamic Lilypad game hook system
+
+author: Senither
+authros: [Senither]
+
+depend: [LilyPad-Connect]
+
+commands:
+  leave:
+    description: Leave the minigame server
+    aliases: [quit, lobby]
