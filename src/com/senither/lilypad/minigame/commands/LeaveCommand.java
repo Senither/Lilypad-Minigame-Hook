@@ -50,8 +50,10 @@ public class LeaveCommand implements CommandExecutor {
                     random.nextInt(plugin.getLobbies().size())
             );
 
+            intervalCheck.remove(player.getName());
             return LilypadMinigameAPI.teleportPlayer(player.getName(), name);
         }
+        aboutToLeaveMessage(player);
         return false;
     }
 
