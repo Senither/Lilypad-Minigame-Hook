@@ -3,6 +3,8 @@ Lilypad Minigame Hook
 
 Lilypad Minigame Hook is a simple Minecraft plugin built for Lilypad networks, intended to make building minigames for Minecraft networks easier.
 
+> **Note:** This plugin doesn't do anything without the [Lilypad Minigame Lobby](https://github.com/Senither/Lilypad-Minigame-Lobby) plugin.
+
 Lilypad Minigame Hook is one of a two-part system, together creating the Lilypad Minigame network, the other part being the Lilypad Minigame Lobby plugin, both plugins work in combination with each other to form a minigame network via LilypadMC. The lobby plugin handles game boards, displaying useful information to the players, and tracking servers that use the hook plugin, while the hook plugin sends data to the lobby server(s) that should be displayed on the game boards, gives players an easy way to leave game servers and re-join the lobby servers, and makes it easy for developers to create minigames that work in a Lilypad Networks.
 
 ## Setup and Installation
