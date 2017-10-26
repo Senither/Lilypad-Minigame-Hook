@@ -12,3 +12,6 @@ commands:
   leave:
     description: Leave the minigame server
     aliases: [quit, lobby]
+  lilypadminigame:
+    description: Lilypad minigame hook version command
+    aliases: [lilypadgame, minigamehook, gamehook, lilypadhook, lilyhook]

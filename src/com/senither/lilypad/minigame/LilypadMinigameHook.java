@@ -1,5 +1,6 @@
 package com.senither.lilypad.minigame;
 
+import com.senither.lilypad.minigame.commands.AuthorCommand;
 import com.senither.lilypad.minigame.commands.LeaveCommand;
 import com.senither.lilypad.minigame.network.NetworkManager;
 import com.senither.lilypad.minigame.utils.Envoyer;
@@ -46,6 +47,7 @@ public class LilypadMinigameHook extends JavaPlugin {
         connect.registerEvents(network = new NetworkManager(this));
         network.setGameChannel(getConfig().getString("channel", "GLOBAL"));
 
+        getCommand("lilypadminigame").setExecutor(new AuthorCommand(this));
         getCommand("leave").setExecutor(new LeaveCommand(this, getConfig().getBoolean("leave-command.enabled", true)));
     }
 
