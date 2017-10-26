@@ -1,6 +1,6 @@
 name: LilyPad-Minigame-Hook
 main: com.senither.lilypad.minigame.LilypadMinigameHook
-version: 0.1
+version: 1.0.1
 description: Dynamic Lilypad game hook system
 
 author: Senither
